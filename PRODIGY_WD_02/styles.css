@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2em;
+    color: #00ff99;
+}
+
+/* Timer Display */
+.timer {
+    font-size: 3em;
+    font-weight: bold;
+    color: #00ff99;
+    margin: 2px 0; /* Adjusted spacing to move timer up */
+}
+
+/* Stopwatch Circle */
+.progress-ring {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 40px auto; /* More margin to avoid lap overlap */
+}
+
+svg {
+    width: 200px;
+    height: 200px;
+    transform: rotate(-90deg);
+}
+
+circle {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 10;
+    stroke-dasharray: 565.48;
+    stroke-linecap: round;
+}
+
+#progress {
+    stroke: #00ff99;
+    stroke-dashoffset: 565.48;
+    transition: stroke-dashoffset 0.1s linear;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#startStopBtn { background: #00ff99; color: #000; }
+#resetBtn { background: #444; color: #fff; }
+#lapBtn { background: #ffaa00; color: #000; }
+
+button:hover { opacity: 0.8; }
+
+/* Lap Times */
+.laps h2 {
+    color: #ffaa00;
+    margin-top: 60px; /* Push laps down further */
+    font-size: 1.5em;
+}
+
+#lapsList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px; /* Ensure spacing between laps */
+}
+
+#lapsList li {
+    padding: 10px 0; /* More spacing between lap times */
+    font-size: 1.2em;
+    border-bottom: 1px solid #444;
+    display: block;
+}
+
+.lap-yellow { color: #ffaa00; }
+.lap-red { color: #ff5500; }
+
+.laps {
+    clear: both;
+    margin-top: 20px; /* Add margin to separate from the timer */
+}
+
+.laps ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.laps li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
